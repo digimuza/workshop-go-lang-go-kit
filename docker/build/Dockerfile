@@ -59,7 +59,8 @@ RUN apk add --no-cache bash git openssh
 
 RUN go get github.com/jinzhu/gorm \
  && go get github.com/lib/pq \
- && go get github.com/gorilla/mux
+ && go get github.com/gorilla/mux \
+ && go get github.com/go-kit/kit/log
 
 WORKDIR /platform
 
