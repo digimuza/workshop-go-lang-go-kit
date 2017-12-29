@@ -60,7 +60,13 @@ RUN apk add --no-cache bash git openssh
 RUN go get github.com/jinzhu/gorm \
  && go get github.com/lib/pq \
  && go get github.com/gorilla/mux \
- && go get github.com/go-kit/kit/log
+ && go get github.com/go-kit/kit/endpoint \
+ && go get github.com/go-kit/kit/transport/http \ 
+ && go get github.com/go-kit/kit/log \
+ && go get github.com/go-kit/kit/metrics \
+ && go get github.com/go-kit/kit/metrics/prometheus \
+ && go get github.com/prometheus/client_golang/prometheus \
+ && go get github.com/prometheus/client_golang/prometheus/promhttp
 
 WORKDIR /platform
 
